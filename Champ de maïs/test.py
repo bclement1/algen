@@ -12,7 +12,7 @@ min = 1
 max = 10
 lx = 100
 ly = 100
-number_of_gen = 100
+number_of_gen = 30
 
 def show_fitness_history(min, max, lx, ly, number_of_gen, retain_length = 0.1, random_select = 0.1, mutate = 0.2):
     # Création du champ
@@ -59,9 +59,11 @@ def return_pop(gen):
                 vmin = tab.min(),
                 vmax = tab.max())
 
-
+'''
 tab = build_pop(min, max, lx, ly, number_of_gen, retain_length = 0.2, random_select = 0.05, mutate = 0.05)
 grid_kws = {'width_ratios': (0.9, 0.05), 'wspace': 0.2}
 fig, (ax, cbar_ax) = plt.subplots(1, 2, gridspec_kw = grid_kws, figsize = (12, 8))
-anim = FuncAnimation(fig = fig, func = return_pop, frames = number_of_gen, interval = 500)
+anim = FuncAnimation(fig = fig, func = return_pop, frames = number_of_gen, interval = 10000)
 plt.show()
+'''
+show_fitness_history(min, max, lx, ly, number_of_gen)

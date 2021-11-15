@@ -7,6 +7,7 @@ from random import randint, random
 import numpy as np
 
 # Définition des fonctions principales
+
 def individual(min, max):
     # Un individu est un épi de maïs, caractérisé par sa position 2D et son rendement
     return randint(min, max)
@@ -88,7 +89,7 @@ def evolve(pop, min, max, lx, ly, retain_length = 0.1, random_select = 0.2, muta
                     child_yield = randint(male[0], female[0])
                     child = [child_yield, i, j]
                 # Que l'on l'ajoute aux enfants
-                children.append(child)    
+                children.append(child)
     # Et enfin on ajoute les hybridés aux parents de la prochaine génération
     parents.extend(children)
     # Peuplement de la population par la nouvelle génération
